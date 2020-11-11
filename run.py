@@ -23,9 +23,9 @@ con_tokenizer = BertTokenizer.from_pretrained('y2d1')
 lab_tokenizer = BertTokenizer.from_pretrained('z2d')
 data_collator = DataCollatorForMLM(tokenizer=con_tokenizer, mlm=True, mlm_probability=0.2)
 train_dataset = MLMDataset(con_tokenizer=con_tokenizer, lab_tokenizer=lab_tokenizer,
-                           file_path='trainpath')
+                           file_path='./data/trainpath')
 eval_dataset = MLMDataset(con_tokenizer=con_tokenizer, lab_tokenizer=lab_tokenizer,
-                          file_path='evalpath')
+                          file_path='./data/evalpath')
 training_args = TrainingArguments(
     output_dir='../results',  # output directory
     do_train=True,
