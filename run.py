@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from transformers import BertConfig, BertTokenizer, AutoModelForMaskedLM, TrainingArguments
 from utils import DataCollatorForMLM, MLMDataset
-from train import Trainer
 from sklearn.metrics import precision_recall_fscore_support, accuracy_score
 # from train_args import TrainingArguments
 from middle_train import Middle_Trainer
