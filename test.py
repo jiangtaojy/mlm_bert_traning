@@ -10,7 +10,7 @@ config = BertConfig()
 config.vocab_size = 41460  # 句子词典
 model = AutoModelForMaskedLM.from_config(config)
 model.bert.embeddings.word_embeddings = nn.Embedding(1839, 768, padding_idx=0)
-state_dict = torch.load('../results/checkpoint-00000/pytorch_model.bin', map_location="cpu")
+state_dict = torch.load('./results/checkpoint-00000/pytorch_model.bin', map_location="cpu")
 model.load_state_dict(state_dict)
 model.eval()
 pinyin_list = [i for tmp in pinyin('手机没电了', style=Style.TONE3, neutral_tone_with_five=True) for i in tmp]
