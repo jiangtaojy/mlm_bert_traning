@@ -29,7 +29,7 @@ scikit-leran==0.23.2
 
 ## 原理
 原理如下图所示
-![image](/https://github.com/jiangtaojy/mlm_bert_traning/blob/main/data/model.png)
+![image](https://github.com/jiangtaojy/mlm_bert_traning/blob/main/data/model.png)
 1. 构造训练样本。首先根据输入的正确拼音序列，任务将其变成错误的拼音，即模糊音替代算法，使得模型具备拼音纠错能力。
 2. 计算拼音loss。在bert的前6层的输出后添加全连接层，仅针对被替换的拼音进行计算loss，希望模型在前6层能学会纠错。
 3. 计算汉字loss。在bert的后6层的输出后，针对所有汉字进行计算loss，希望模型能学会拼音和汉字间的对应关系。
