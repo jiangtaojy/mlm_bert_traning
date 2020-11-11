@@ -17,7 +17,7 @@ scikit-leran==0.23.2
 
 ## 训练
 
-运行run.py，将其中的训练数据路径和测试数据路径改为你们的文件路径，文件格式类似trainpath和evalpath文件格式保持一致。
+运行run.py，将其中的训练数据路径和测试数据路径改为你们的文件路径，文件格式类似data/trainpath和data/evalpath文件格式保持一致。
 
 ## 测试
 
