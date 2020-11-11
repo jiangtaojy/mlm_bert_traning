@@ -1,0 +1,2 @@
+# mlm_bert_traning
+基于mlm方式的带有纠错功能的拼音转汉字bert预训练模型
